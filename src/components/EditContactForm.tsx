@@ -4,7 +4,7 @@ import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Stuff } from '@prisma/client';
+import { Contact } from '@prisma/client';
 import { EditContactSchema } from '@/lib/validationSchemas';
 import { editContact } from '@/lib/dbActions';
 
@@ -16,7 +16,7 @@ const onSubmit = async (data: Contact) => {
   });
 };
 
-const EditContact Form = ({ contact  }: { contact : Contact  }) => {
+const EditContactForm = ({ contact }: { contact : Contact }) => {
   const {
     register,
     handleSubmit,
@@ -83,7 +83,6 @@ const EditContact Form = ({ contact  }: { contact : Contact  }) => {
                         type="text"
                         defaultValue={contact.image}
                         {...register('image')}
-                        defaultValue={contact.description}
                         className={`form-control ${errors.image ? 'is-invalid' : ''}`}
                       />
                       <div className="invalid-feedback">{errors.image?.message}</div>
@@ -94,11 +93,11 @@ const EditContact Form = ({ contact  }: { contact : Contact  }) => {
                   <Form.Label>Description</Form.Label>
                   <textarea
                     {...register('description')}
+                    defaultValue={contact.description}
                     className={`form-control ${errors.description ? 'is-invalid' : ''}`}
                   />
                   <div className="invalid-feedback">{errors.description?.message}</div>
                 </Form.Group>
-                <input type="hidden" {...register('owner')} value={currentUser} />
                 <input type="hidden" {...register('owner')} value={contact.owner} />
                 <Form.Group className="form-group">
                   <Row className="pt-3">
