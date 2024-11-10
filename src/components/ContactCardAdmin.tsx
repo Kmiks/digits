@@ -2,7 +2,7 @@
 
 import { Contact, Note } from '@prisma/client';
 import { Card, Image, ListGroup } from 'react-bootstrap';
-import NoteItem from '@components/NoteItem';
+import NoteItem from '@/components/NoteItem';
 
 /* Renders a single row in the LisNoteItem';ctCard';ble. See list/page.tsx. */
 const ContactCardAdmin = ({ contact, notes }: { contact: Contact, notes: Note[] }) => (
@@ -21,7 +21,9 @@ const ContactCardAdmin = ({ contact, notes }: { contact: Contact, notes: Note[] 
     <Card.Body>
       <Card.Text>{contact.description}</Card.Text>
       <ListGroup variant="flush">
-        {notes.map((note) => <NoteItem key={note.id} note={note}/>)}
+        {notes.map((note) => (
+          <NoteItem key={note.id} note={note} />
+        ))}
       </ListGroup>
       <p className="blockquote-footer">{contact.owner}</p>
     </Card.Body>
