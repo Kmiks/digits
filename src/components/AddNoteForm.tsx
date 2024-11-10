@@ -41,7 +41,6 @@ const AddNoteForm = ({ contact }: { contact: Contact }) => {
   if (status === 'unauthenticated') {
     redirect('/auth/signin');
   }
-
   return (
     <Card>
       <Card.Header>
