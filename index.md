@@ -125,19 +125,10 @@ When adding a new note to the contact, a timestamp is automatically captured to 
    
    **Example of Adding a Note:**
    ![Adding a Note](doc/add-note.png)
-
----
-
-## GitHub Pages Setup
-
-The GitHub Page for this project is live! Visit it at:
-
-[Digits App GitHub Page](https://your-username.github.io/digits)
-
 ---
 
 ### Credits
-- Developed by [Your Name](https://github.com/your-username).
+- Developed by [Casey](https://github.com/kmiks).
 - Built with [Next.js](https://nextjs.org/), [Prisma](https://www.prisma.io/), and [PostgreSQL](https://www.postgresql.org/).
 
 ---
