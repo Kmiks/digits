@@ -64,12 +64,12 @@ To get started with the Digits application, follow these steps:
    ![Change Password Page](doc/change-password-page.png)
 
 ### 5. **Not Authorized Page**
-   - If a user tries to access a restricted area without the proper permissions, this page will be shown.
+   - If a user tries to access a restricted area without the proper permissions, the user wil be asked to signin.
    ![Not Authorized Page](doc/not-authorized-page.png)
 
 ### 6. **Register Page**
    - New users can register for an account.
-   ![Register Page](doc/register-page.png)
+   ![Register Page](doc/signin-page.png)
 
 ### 7. **Sign Out Page**
    - Users can log out from the app on this page.
